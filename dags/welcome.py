@@ -13,12 +13,14 @@ import requests
 def print_welcome():
 
     print('Welcome to Airflow!')
+    sleep(60)
 
 
 
 def print_date():
 
     print('Today is {}'.format(datetime.today().date()))
+    sleep(60)
 
 
 
@@ -29,6 +31,7 @@ def print_random_quote():
     quote = response.json()['content']
 
     print('Quote of the day: "{}"'.format(quote))
+    sleep(60)
 
 
 
