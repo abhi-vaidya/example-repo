@@ -16,6 +16,6 @@ dag = DAG('hello_world', default_args=default_args, schedule_interval=timedelta(
 
 t1 = BashOperator(
     task_id='say_hello',
-    bash_command='echo "Hello World from Airflow!"',
+    bash_command='x=1;while [ $x -le 15 ]; do echo "Hello World $x";x=$(( $x + 1 ));done',
     dag=dag,
 )
